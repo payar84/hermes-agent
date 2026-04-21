@@ -2,6 +2,8 @@
 
 A fork of [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent) — an autonomous AI agent framework powered by Hermes models with tool-calling and structured reasoning capabilities.
 
+> **Personal fork notes:** I'm using this with a local Ollama backend. Setting `OPENAI_API_BASE=http://localhost:11434/v1` and `MODEL_NAME=hermes3` works well.
+
 ## Features
 
 - 🤖 **Hermes Model Integration** — Optimized for NousResearch Hermes series models
@@ -60,6 +62,16 @@ All configuration is handled via environment variables. See [`.env.example`](.en
 | `MODEL_NAME` | Model identifier to use | `NousResearch/Hermes-3-Llama-3.1-8B` |
 | `MAX_ITERATIONS` | Max agentic loop iterations | `10` |
 | `TEMPERATURE` | Sampling temperature | `0.7` |
+
+### Ollama Setup
+
+If you're running locally with Ollama:
+
+```bash
+OPENAI_API_BASE=http://localhost:11434/v1
+OPENAI_API_KEY=ollama
+MODEL_NAME=hermes3
+```
 
 ## Architecture
 
