@@ -74,6 +74,8 @@ MODEL_NAME=hermes3
 TEMPERATURE=0.3  # lower temp helps with reliable tool call formatting
 ```
 
+> **Note:** Ollama sometimes returns responses slowly on first load while the model is pulled into memory. If you're seeing timeouts, try increasing your HTTP timeout or running `ollama run hermes3` once beforehand to pre-load the model.
+
 ## Architecture
 
 ```
