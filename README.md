@@ -78,6 +78,8 @@ HTTP_TIMEOUT=180  # bumped from 120 — Ollama on my machine regularly needs mor
 
 > **Note:** Ollama sometimes returns responses slowly on first load while the model is pulled into memory. If you're seeing timeouts, try increasing your HTTP timeout or running `ollama run hermes3` once beforehand to pre-load the model.
 
+> **Tip:** If Ollama is running but the model keeps getting unloaded between calls (common when RAM is tight), set `OLLAMA_KEEP_ALIVE=-1` in your Ollama environment to keep the model loaded indefinitely.
+
 ## Architecture
 
 ```
@@ -95,4 +97,4 @@ hermes_agent/
 
 ## Contributing
 
-Please open an issue before submitting a
+Please open an issue be
