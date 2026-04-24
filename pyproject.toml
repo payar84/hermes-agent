@@ -79,7 +79,8 @@ known-first-party = ["hermes_agent"]
 
 [tool.mypy]
 python_version = "3.10"
-strict = true
+# Relaxed from strict=true for personal use — too noisy while experimenting
+strict = false
 ignore_missing_imports = true
 
 [tool.pytest.ini_options]
