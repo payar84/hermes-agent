@@ -62,6 +62,7 @@ All configuration is handled via environment variables. See [`.env.example`](.en
 | `MODEL_NAME` | Model identifier to use | `NousResearch/Hermes-3-Llama-3.1-8B` |
 | `MAX_ITERATIONS` | Max agentic loop iterations | `10` |
 | `TEMPERATURE` | Sampling temperature | `0.3` |
+| `HTTP_TIMEOUT` | HTTP request timeout in seconds | `120` |
 
 ### Ollama Setup
 
@@ -72,6 +73,7 @@ OPENAI_API_BASE=http://localhost:11434/v1
 OPENAI_API_KEY=ollama
 MODEL_NAME=hermes3
 TEMPERATURE=0.3  # lower temp helps with reliable tool call formatting
+HTTP_TIMEOUT=120  # Ollama can be slow on first load; bump this to avoid timeouts
 ```
 
 > **Note:** Ollama sometimes returns responses slowly on first load while the model is pulled into memory. If you're seeing timeouts, try increasing your HTTP timeout or running `ollama run hermes3` once beforehand to pre-load the model.
@@ -97,4 +99,4 @@ Please open an issue before submitting a PR. See the [issue templates](.github/I
 
 ## License
 
-MIT — see [LICENSE](LICENSE) for details.
+MIT — see [LICENSE](LICENSE)
