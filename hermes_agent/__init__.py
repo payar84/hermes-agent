@@ -6,6 +6,7 @@ supporting tool use, function calling, and multi-step reasoning.
 Personal fork notes:
 - Using this for experimenting with custom tool integrations
 - Upstream: https://github.com/NousResearch/hermes-agent
+- Added AgentConfig to __all__ since it's exported and commonly used
 """
 
 __version__ = "0.1.0"
@@ -19,4 +20,5 @@ __all__ = [
     "HermesAgent",
     "AgentConfig",
     "__version__",
+    "__author__",
 ]
