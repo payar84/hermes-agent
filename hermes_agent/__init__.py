@@ -8,6 +8,8 @@ Personal fork notes:
 - Upstream: https://github.com/NousResearch/hermes-agent
 - Added AgentConfig to __all__ since it's exported and commonly used
 - Added __license__ to __all__ for completeness
+- Removed __author__ and __license__ from __all__; dunder metadata doesn't
+  need to be part of the public API surface
 """
 
 __version__ = "0.1.0"
@@ -21,6 +23,4 @@ __all__ = [
     "HermesAgent",
     "AgentConfig",
     "__version__",
-    "__author__",
-    "__license__",
 ]
