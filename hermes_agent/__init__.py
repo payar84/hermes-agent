@@ -7,6 +7,7 @@ Personal fork notes:
 - Using this for experimenting with custom tool integrations
 - Upstream: https://github.com/NousResearch/hermes-agent
 - Added AgentConfig to __all__ since it's exported and commonly used
+- Added __license__ to __all__ for completeness
 """
 
 __version__ = "0.1.0"
@@ -21,4 +22,5 @@ __all__ = [
     "AgentConfig",
     "__version__",
     "__author__",
+    "__license__",
 ]
