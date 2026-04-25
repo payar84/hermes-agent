@@ -74,6 +74,7 @@ OPENAI_API_KEY=ollama
 MODEL_NAME=hermes3
 TEMPERATURE=0.3  # lower temp helps with reliable tool call formatting
 HTTP_TIMEOUT=180  # bumped from 120 — Ollama on my machine regularly needs more time on first load
+OLLAMA_KEEP_ALIVE=-1  # keep model in memory between calls — essential if RAM allows
 ```
 
 > **Note:** Ollama sometimes returns responses slowly on first load while the model is pulled into memory. If you're seeing timeouts, try increasing your HTTP timeout or running `ollama run hermes3` once beforehand to pre-load the model.
@@ -89,12 +90,5 @@ hermes_agent/
 ├── tools/               # Tool definitions and implementations
 │   ├── __init__.py
 │   ├── base.py
-│   └── builtins.py
-├── models/              # Pydantic models / schemas
-├── prompts/             # System and user prompt templates
-└── utils/               # Utility helpers
+│   └── builtins
 ```
-
-## Contributing
-
-Please open an issue be
